@@ -3,11 +3,11 @@
 
 "version":"1.0",
 "description":"This is a chrome extenstion which solves captcha for moodle",
-"permissions":["storage","declarativeContent","tabs","*://moodle.iitd.ac.in/login/index.php"],
+"permissions":["storage","declarativeContent","tabs","*://moodle.iitd.ac.in/login/index.php","*://oauth.iitd.ac.in/*"],
 "content_scripts": [
     {
-      "matches": ["*://moodle.iitd.ac.in/login/index.php"],
-      "js": ["hello.js"]
+      "matches": ["*://moodle.iitd.ac.in/login/index.php","*://oauth.iitd.ac.in/*"],
+      "js": ["tesseract/tesseract.min.js","main.js"]
     }
   ],
 "page_action":{
